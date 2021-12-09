@@ -38,22 +38,14 @@ router.put("/:id", async (req, res) => {
 // delete user
 router.delete("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
-    // Check if user wanna update his password
-    if (req.body.password) {
-      try {
-        const salt = await bcrypt.genSalt(10);
-        req.body.password = await bcrypt.hash(req.body.password, salt);
-      } catch (err) {
-        return res.status(500).json({ error: err });
-      }
-    }
-
     // Details other than password
     try {
-      const user = await User.findByIdAndUpdate(req.params.id, {
-        $set: req.body,
-      });
-      res.status(200).json({ success: "Account has been updated" });
+      const user = await User.findByIdAndDelete(req.params.id);
+      if (!user) return res.status(400).send({ error: "No such user found" });
+
+      res
+        .status(200)
+        .json({ success: "Account has been deleted Successfully" });
     } catch (err) {
       return res
         .status(403)
