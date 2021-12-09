@@ -7,9 +7,9 @@ router.get("/", (req, res) => {
 
 // Create a post
 router.post("/", async (req, res) => {
-  const post = new Post({});
+  const post = new Post(req.body);
   try {
-    const savedPost = post.save();
+    const savedPost = await post.save();
     res.status(200).json({ success: true, post: savedPost });
   } catch (error) {
     res.status(500).send({ error: "server Error accured" });
