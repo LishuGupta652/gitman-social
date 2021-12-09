@@ -58,6 +58,17 @@ router.delete("/:id", async (req, res) => {
   }
 });
 // get a user
+router.get("/:id", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) return res.status(400).json({ error: "No such user found" });
+
+    const { password, ...otherData } = user._doc;
+    res.status(200).json(otherData);
+  } catch (error) {
+    res.status(500).json({ error: "ERROR ACCURED" });
+  }
+});
 // follow user
 // unfollow user
 module.exports = router;
