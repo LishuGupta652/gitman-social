@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 
 // update user
 router.put("/:id", async (req, res) => {
-  if (req.body.userId === req.params.id) {
+  if (req.body.userId === req.params.id || req.body.isAdmin) {
     // Check if user wanna update his password
     if (req.body.password) {
       try {
@@ -37,7 +37,7 @@ router.put("/:id", async (req, res) => {
 });
 // delete user
 router.delete("/:id", async (req, res) => {
-  if (req.body.userId === req.params.id) {
+  if (req.body.userId === req.params.id || req.body.isAdmin) {
     // Details other than password
     try {
       const user = await User.findByIdAndDelete(req.params.id);
