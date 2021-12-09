@@ -9,6 +9,7 @@
 --- routes
 user routes
 /api/user
+/api/auth
 
 ---
 
