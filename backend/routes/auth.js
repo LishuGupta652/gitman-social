@@ -8,18 +8,18 @@ router.get("/", (req, res) => {
 });
 
 // REGISTER
-router.post("/register", (req, res) => {
+router.post("/register", async (req, res) => {
   // Validating the data
   const { error, data } = registerValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   try {
     const user = new User({
-      username: "lishu",
-      email: "lishu@gmail.com",
-      password: "12",
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password,
     });
-    user.save();
+    await user.save();
     return res.send("hi");
   } catch (err) {
     console.log(err);
