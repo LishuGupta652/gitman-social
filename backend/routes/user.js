@@ -25,6 +25,8 @@ router.put("/:id", async (req, res) => {
       const user = await User.findByIdAndUpdate(req.params.id, {
         $set: req.body,
       });
+      if (!user) return res.status(400).send({ error: "No such user found" });
+
       res.status(200).json({ success: "Account has been updated" });
     } catch (err) {
       return res
