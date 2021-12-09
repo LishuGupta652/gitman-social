@@ -20,8 +20,10 @@ router.put("/:id", async (req, res) => {
   try {
     const post = Post.findById(req.params.id);
     if (post.userId !== req.body.userId) {
-      await post.findOne({ $set: req.body });
-      return res.status(200).send({ success: "post has been updated" });
+      const updatedPost = await post.updateOne({ $set: req.body });
+      return res
+        .status(200)
+        .send({ success: "post has been updated", post: updatedPost });
     } else {
       return res.status(500).send({ error: "You can not update other's post" });
     }
