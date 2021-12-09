@@ -1,7 +1,9 @@
 const router = require("express").Router();
+const bcrypt = require("bcrypt");
 
 const { registerValidation, loginValidation } = require("../validate");
 const User = require("../models/user");
+const user = require("../models/user");
 
 router.get("/", (req, res) => {
   res.send("auth route");
@@ -9,23 +11,62 @@ router.get("/", (req, res) => {
 
 // REGISTER
 router.post("/register", async (req, res) => {
-  console.log(req.body);
   // Validating the data
-  const { error, data } = registerValidation(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
-  console.log(error, data);
+  const { error, value } = registerValidation(req.body);
+  if (error) return res.status(400).send({ error: error.details[0].message });
 
-  const newUser = new User({
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password,
-  });
+  // Checking if the email already exists in the database
+  const emailExist = await User.findOne({ email: req.body.email });
+  if (emailExist)
+    return res.status(400).send({ error: "Email Already exists" });
 
   try {
+    // Hashing password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
+    // Create new user
+    const newUser = new User({
+      username: req.body.username,
+      email: req.body.email,
+      password: hashedPassword,
+    });
+
+    // Save the user
     const user = await newUser.save();
-    res.status(200).send(user);
+    const { password, updatedAt, ...userSend } = user._doc;
+    res.status(200).send(userSend);
   } catch (err) {
-    res.status(400).send("Error in database");
+    res.status(400).send({ error: "Server Error" });
+  }
+});
+
+// Login
+router.post("/login", async (req, res) => {
+  // validate the data
+  const { error, value } = loginValidation(req.body);
+  if (error) return res.status(400).send({ error: error.details[0].message });
+
+  try {
+    // Check if email does not exsits
+    const user = await User.findOne({ email: req.body.email });
+    if (!user)
+      return res
+        .status(400)
+        .send({ error: "Email does not exists. Please Sign up." });
+
+    // Validate bcrypt password
+    const validPassword = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
+    !validPassword && res.status(400).json({ error: "Password Invalid" });
+
+    const { password, ...userData } = user._doc;
+    return res.status(200).send(userData);
+  } catch (err) {
+    console.log(err);
+    res.status(400).send({ error: "Server Error" });
   }
 });
 
