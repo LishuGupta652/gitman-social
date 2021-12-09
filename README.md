@@ -7,6 +7,10 @@
 - [] passport
 - [] bcrypt
 
+--- routes
+user routes
+/api/user
+
 ---
 
 - [] frontend
