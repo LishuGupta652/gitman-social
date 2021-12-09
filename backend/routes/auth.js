@@ -63,7 +63,11 @@ router.post("/login", async (req, res) => {
     !validPassword && res.status(400).json({ error: "Password Invalid" });
 
     const { password, ...userData } = user._doc;
-    return res.status(200).send(userData);
+
+    // Signining json Webtoken
+    const token = jtw.sign({ _id: userExists._id }, process.env.TOKEN_SECRET);
+    return res.header("auth-token", token).status(200).send(token);
+    // return res.status(200).send(userData);
   } catch (err) {
     console.log(err);
     res.status(400).send({ error: "Server Error" });
