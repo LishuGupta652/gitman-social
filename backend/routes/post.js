@@ -45,11 +45,29 @@ router.delete("/:id", async (req, res) => {
       return res.status(500).send({ error: "You can not delete other's post" });
     }
   } catch (error) {
-    console.log(error);
     return res.status(500).send({ error: "server Error accured" });
   }
 });
 // Like a post
+router.put("/:id/like", async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    if (!post.likes.inclues(req.body.userId)) {
+      await post.updateOne({ $push: { likes: req.body.userId } });
+      return res
+        .status(200)
+        .send({ success: "post has been liked", post: updatedPost });
+    } else {
+      await post.updateOne({ $pull: { likes: req.body.userId } });
+      return res
+        .status(200)
+        .send({ success: "post has been disliked", post: updatedPost });
+    }
+  } catch (error) {
+    return res.status(500).send({ error: "server Error accured" });
+  }
+});
 // Get a post
 // Get timeline posts
 
