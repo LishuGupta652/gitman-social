@@ -91,6 +91,7 @@ router.put("/:id/follow", async (req, res) => {
     res.status(403).json({ error: "You can not follow yourself" });
   }
 });
+
 // unfollow user
 router.put("/:id/unfollow", async (req, res) => {
   // Checking if user are same or different

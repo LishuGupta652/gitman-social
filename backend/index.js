@@ -9,6 +9,7 @@ const morgan = require("morgan");
 // Importing routes
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/post");
 
 mongoose.connect(process.env.MONGO_DB_URL, () => {
   console.log("Mongo db is live");
@@ -21,6 +22,7 @@ app.use(morgan("common"));
 
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/post", postRoute);
 app.get("/", (req, res) => {
   res.status(200).send("App is runinng file");
 });
