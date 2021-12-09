@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "lishu gupta",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^6.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
 }
