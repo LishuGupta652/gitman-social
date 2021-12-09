@@ -33,6 +33,22 @@ router.put("/:id", async (req, res) => {
   }
 });
 // Delete a post
+router.delete("/:id", async (req, res) => {
+  try {
+    const post = Post.findById(req.params.id);
+    if (post.userId !== req.body.userId) {
+      const updatedPost = await post.deleteOne({ $set: req.body });
+      return res
+        .status(200)
+        .send({ success: "post has been deleted", post: updatedPost });
+    } else {
+      return res.status(500).send({ error: "You can not delete other's post" });
+    }
+  } catch (error) {
+    console.log(error);
+    return res.status(500).send({ error: "server Error accured" });
+  }
+});
 // Like a post
 // Get a post
 // Get timeline posts
