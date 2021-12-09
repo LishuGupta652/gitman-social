@@ -8,8 +8,8 @@
 
 --- routes
 user routes
-/api/user
 /api/auth
+/api/user
 
 ---
 
