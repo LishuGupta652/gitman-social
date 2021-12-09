@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_DB_URL, () => {
 });
 
 // middleware
-app.use(express());
+app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
