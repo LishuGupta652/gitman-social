@@ -66,11 +66,11 @@ router.post("/login", async (req, res) => {
 
     // Signining json Webtoken
     const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
-    return res.header("auth-token", token).status(200).send(token);
+    return res.header("auth-token", token).status(200).send(userData);
     // return res.status(200).send(userData);
   } catch (err) {
     console.log(err);
-    res.status(400).send({ error: "Server Error" });
+    res.status(500).send({ error: "Server Error" });
   }
 });
 
