@@ -38,4 +38,17 @@
   border-radius: 30px;
   display: flex;
   align-items: center;
+  outline: none;
+}
+.seachIcon {
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+
+.searchInput {
+  border: none;
+  width: 70%;
+}
+.searchInput:focus {
+  outline: none;
 }
