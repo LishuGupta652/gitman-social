@@ -5,9 +5,7 @@ import Topbar from "../../components/topbar/Topbar";
 const Home = () => {
   return (
     <div>
-      <h1>
-        <Topbar />
-      </h1>
+      <Topbar />
     </div>
   );
 };

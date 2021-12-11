@@ -1,5 +1,6 @@
-import "topbar.css";
-import { Search } from "@mui/icons-material/";
+import "./topbar.css";
+import { Chat, Notifications, Search } from "@mui/icons-material/";
+import Person from "@mui/icons-material/Person";
 
 const Topbar = () => {
   return (
@@ -17,7 +18,24 @@ const Topbar = () => {
         </div>
       </div>
       <div className="topbarRight">
-        <div className="topbarLinks"></div>
+        <div className="topbarLinks">
+          <span className="topbarLink">Homepage</span>
+          <span className="topbarLink">Timeline</span>
+        </div>
+        <div className="topbarIcons">
+          <div className="topbarIconItem">
+            <Person />
+            <span className="topbarIconBadge">1</span>
+          </div>
+          <div className="topbarIconItem">
+            <Chat />
+            <span className="topbarIconBadge">1</span>
+          </div>
+          <div className="topbarIconItem">
+            <Notifications />
+            <span className="topbarIconBadge">1</span>
+          </div>
+        </div>
       </div>
     </div>
   );
