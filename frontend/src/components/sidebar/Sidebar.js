@@ -12,9 +12,10 @@ import {
 import styled from "styled-components";
 
 const SidebarStyled = styled.div`
-  flex: 3;
+  flex: 2;
   height: calc(100vh - 50px);
   background-color: #fafafa;
+  overflow-y: scroll;
 
   .wrapper {
     padding: 20px;
@@ -22,6 +23,38 @@ const SidebarStyled = styled.div`
   ul,
   li {
     list-style: none;
+  }
+  .listItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .icon {
+    margin: 0 10px;
+  }
+  .button {
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  hr {
+    margin: 20px auto;
+  }
+  .friendList {
+    list-style: none;
+  }
+  .friendListItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .friendImage {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
   }
 `;
 
@@ -65,6 +98,34 @@ const Sidebar = () => {
           <li className="listItem">
             <RssFeed className="icon" />
             <span className="listItemText">Courses</span>
+          </li>
+        </ul>
+        <button className="button">Show more</button>
+        <hr />
+        <ul className="friendList">
+          <li className="friendListItem">
+            <img src="/lishu.jpg" className="friendImage" alt="" />
+            <span className="friendName">Lishu gupta</span>
+          </li>
+          <li className="friendListItem">
+            <img src="/lishu.jpg" className="friendImage" alt="" />
+            <span className="friendName">Lishu gupta</span>
+          </li>
+          <li className="friendListItem">
+            <img src="/lishu.jpg" className="friendImage" alt="" />
+            <span className="friendName">Lishu gupta</span>
+          </li>
+          <li className="friendListItem">
+            <img src="/lishu.jpg" className="friendImage" alt="" />
+            <span className="friendName">Lishu gupta</span>
+          </li>
+          <li className="friendListItem">
+            <img src="/lishu.jpg" className="friendImage" alt="" />
+            <span className="friendName">Lishu gupta</span>
+          </li>
+          <li className="friendListItem">
+            <img src="/lishu.jpg" className="friendImage" alt="" />
+            <span className="friendName">Lishu gupta</span>
           </li>
         </ul>
       </div>

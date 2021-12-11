@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FeedStyled = styled.div`
-  flex: 5;
+  flex: 6;
 `;
 
 const Feed = () => {
