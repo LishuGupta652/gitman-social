@@ -15,6 +15,7 @@ router.post("/", async (req, res) => {
     res.status(500).send({ error: "server Error accured" });
   }
 });
+
 // Update a post
 router.put("/:id", async (req, res) => {
   try {
@@ -32,6 +33,7 @@ router.put("/:id", async (req, res) => {
     return res.status(500).send({ error: "server Error accured" });
   }
 });
+
 // Delete a post
 router.delete("/:id", async (req, res) => {
   try {
@@ -48,6 +50,7 @@ router.delete("/:id", async (req, res) => {
     return res.status(500).send({ error: "server Error accured" });
   }
 });
+
 // Like a post
 router.put("/:id/like", async (req, res) => {
   try {
@@ -73,6 +76,7 @@ router.put("/:id/like", async (req, res) => {
     return res.status(500).send({ error: "server Error accured" });
   }
 });
+
 // Get a post
 router.get("/:id", async (req, res) => {
   try {
@@ -82,6 +86,7 @@ router.get("/:id", async (req, res) => {
     return res.status(500).send({ error: "server Error accured" });
   }
 });
+
 // Get timeline posts
 router.post("/timeline/all", async (req, res) => {
   try {
