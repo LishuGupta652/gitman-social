@@ -20,6 +20,35 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  color: white;
+}
+.topbarLink {
+  margin-right: 10px;
+  font-style: 13px;
+  cursor: pointer;
+}
+.topbarIcons {
+  display: flex;
+}
+.topbarIconItem {
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.topbarIconBadge {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  color: white;
+
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  top: -5px;
+  right: -5px;
 }
 
 .topbarImg {
