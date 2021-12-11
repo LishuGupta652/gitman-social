@@ -1,8 +1,11 @@
-import React from "react";
-import "./feed.css";
+import styled from "styled-components";
+
+const FeedStyled = styled.div`
+  flex: 5;
+`;
 
 const Feed = () => {
-  return <div>feed</div>;
+  return <FeedStyled>Feed</FeedStyled>;
 };
 
 export default Feed;

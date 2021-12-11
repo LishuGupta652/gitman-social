@@ -2,11 +2,14 @@ import React from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import Topbar from "../../components/topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import { Feed } from "@mui/icons-material";
 import styled from "styled-components";
 import Rightbar from "../../components/rightbar/Rightbar";
+import Feed from "../../components/feed/Feed";
 
-const HomeContainer = styled.div``;
+const HomeContainer = styled.div`
+  display: flex;
+  width: 100%;
+`;
 
 const Home = () => {
   return (

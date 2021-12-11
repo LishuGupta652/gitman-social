@@ -1,7 +1,11 @@
-import React from "react";
-import "./rightbar.css";
+import styled from "styled-components";
+
+const RightBarStyled = styled.div`
+  flex: 4;
+`;
+
 const Rightbar = () => {
-  return <div>rightbar</div>;
+  return <RightBarStyled>rightbar</RightBarStyled>;
 };
 
 export default Rightbar;
