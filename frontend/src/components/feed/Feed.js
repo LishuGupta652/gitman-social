@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FeedStyled = styled.div`
   flex: 6;
   background: #fff;
-  wrapper {
+  .wrapper {
     padding: 20px;
   }
 `;
