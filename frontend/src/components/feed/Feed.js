@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Post from "../post/Post";
 import Share from "../share/Share";
 
 const FeedStyled = styled.div`
@@ -14,6 +15,7 @@ const Feed = () => {
     <FeedStyled>
       <div className="wrapper">
         <Share />
+        <Post />
       </div>
     </FeedStyled>
   );
