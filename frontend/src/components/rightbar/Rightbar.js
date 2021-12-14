@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const RightBarStyled = styled.div`
   flex: 4;
-
+  gird-area: rightbar;
   .wrapper {
     padding: 20px 20px 0 0;
 

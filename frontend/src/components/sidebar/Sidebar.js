@@ -13,6 +13,7 @@ import styled from "styled-components";
 
 const SidebarStyled = styled.div`
   flex: 2;
+  grid-area: sidebar;
   height: calc(100vh - 50px);
   background-color: #fafafa;
   overflow-y: scroll;

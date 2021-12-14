@@ -5,6 +5,7 @@ import { Posts } from "../../dummyData";
 
 const FeedStyled = styled.div`
   flex: 6;
+  gird-area: feed;
   background: #fff;
   .wrapper {
     padding: 20px;

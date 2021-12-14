@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { HeartBroken, MoreVert } from "@mui/icons-material";
+
+import { Users } from "../../dummyData";
 const PostStyled = styled.div`
   width: 100%;
   border-radius: 10px;
@@ -71,7 +73,7 @@ const PostStyled = styled.div`
 `;
 
 const Post = ({ post }) => {
-  console.log(post);
+  const user = Users.filter((user) => user.id === 1);
   return (
     <PostStyled>
       <div className="wrapper">
