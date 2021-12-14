@@ -1,6 +1,7 @@
 import { CardGiftcard } from "@mui/icons-material";
 import styled from "styled-components";
-import { User } from "../../dummyData";
+import { Users } from "../../dummyData";
+import Online from "../online/Online";
 
 const RightBarStyled = styled.div`
   flex: 4;
@@ -88,50 +89,9 @@ const Rightbar = () => {
         <img className="rightbarAd" alt="" src="/assets/add.jpg" />
 
         <ul className="rightbarFriendList">
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="/background.jpg"
-                className="rightbarProfileImg"
-                alt=""
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">lishu gupta</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="/background.jpg"
-                className="rightbarProfileImg"
-                alt=""
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">lishu gupta</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="/background.jpg"
-                className="rightbarProfileImg"
-                alt=""
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">lishu gupta</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="/background.jpg"
-                className="rightbarProfileImg"
-                alt=""
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">lishu gupta</span>
-          </li>
+          {Users.map((user, index) => (
+            <Online user={user} key={index} />
+          ))}
         </ul>
       </div>
     </RightBarStyled>

@@ -1,5 +1,7 @@
 import React from "react";
+import styled from "styled-components";
 
+const OnlineStyled = styled.div``;
 const Online = ({ user }) => {
   return (
     <div>
