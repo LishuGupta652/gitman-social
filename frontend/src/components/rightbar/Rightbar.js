@@ -21,15 +21,19 @@ const RightBarStyled = styled.div`
     }
 
     .rightbarAd {
-      width: 100%;
       border-radius: 10px;
       margin: 20px 0;
+      max-widht: 100px;
+    }
+    .rightbarTitle {
+      margin-bottom: 20px;
     }
 
     .rightbarFriendList {
       padding: 0;
       margin: 0;
       list-style: none;
+      margin-left: 20px;
     }
     .rightbarFriend {
       display: flex;
@@ -38,7 +42,7 @@ const RightBarStyled = styled.div`
     }
     .rightbarProfileImgContainer {
       margin-right: 10px;
-      postion: relative;
+      position: relative;
     }
     .rightbarProfileImg {
       width: 40px;
@@ -55,6 +59,10 @@ const RightBarStyled = styled.div`
       position: absolute;
       top: -5px;
       right: 0;
+      border: 2px solid white;
+    }
+    .rightbarUsername {
+      font-weight: 500;
     }
   }
 `;
@@ -69,9 +77,10 @@ const Rightbar = () => {
             <b>Lishu gupta</b> and <b>2 other friend </b> have a birthday today!
           </span>
         </div>
-        <img src="rightbarAd" alt="" src="/background.jpg" />
 
-        <h4 className="rightbarFriendList">
+        <div className="rightbarAd"></div>
+
+        <ul className="rightbarFriendList">
           <li className="rightbarFriend">
             <div className="rightbarProfileImgContainer">
               <img
@@ -83,7 +92,40 @@ const Rightbar = () => {
             </div>
             <span className="rightbarUsername">lishu gupta</span>
           </li>
-        </h4>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img
+                src="/background.jpg"
+                className="rightbarProfileImg"
+                alt=""
+              />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">lishu gupta</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img
+                src="/background.jpg"
+                className="rightbarProfileImg"
+                alt=""
+              />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">lishu gupta</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img
+                src="/background.jpg"
+                className="rightbarProfileImg"
+                alt=""
+              />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">lishu gupta</span>
+          </li>
+        </ul>
       </div>
     </RightBarStyled>
   );
