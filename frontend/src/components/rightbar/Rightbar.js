@@ -73,13 +73,49 @@ const RightBarStyled = styled.div`
       font-weight: bold;
       text-transform: capitalize;
     }
+
+    .rightbarTitle {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .rightbarInfo {
+      margin-bottom: 30px;
+    }
+    .rightbarInfoItem {
+      margin-bottom: 10px;
+    }
+    .rightbarInfoKey {
+      font-weight: 500;
+      margin-right: 15px;
+      color: #555;
+    }
+    .rightbarInfoValue {
+      font-weight: 300;
+    }
+    .rightbarFollowings {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .rightbarFollowing {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    .rightbarFollowingImg {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
   }
 `;
 
-const Rightbar = () => {
-  return (
-    <RightBarStyled>
-      <div className="wrapper">
+const Rightbar = ({ profile }) => {
+  const HomeRightBar = () => {
+    return (
+      <>
         <div className="birthdayContainer">
           <CardGiftcard className="birthdayImg" />
           <span className="birthdayText">
@@ -94,6 +130,67 @@ const Rightbar = () => {
             <Online user={user} key={index} />
           ))}
         </ul>
+      </>
+    );
+  };
+  const ProfileRightBar = () => {
+    return (
+      <>
+        <h1 className="rightbarTitle">User Information</h1>
+        <div className="rightbarInfo">
+          <div className="righbarInfoItem">
+            <span className="rightbarInfoKey">City: </span>
+            <span className="rightbarInfoValue">New York</span>
+          </div>
+          <div className="righbarInfoItem">
+            <span className="rightbarInfoKey">From: </span>
+            <span className="rightbarInfoValue">Gwalior</span>
+          </div>
+          <div className="righbarInfoItem">
+            <span className="rightbarInfoKey">Relationship: </span>
+            <span className="rightbarInfoValue">Single</span>
+          </div>
+        </div>
+
+        <h4 className="rightbarTitle">User friends</h4>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">Lishu gupta</span>
+          </div>
+        </div>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">Lishu gupta</span>
+          </div>
+        </div>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">Lishu gupta</span>
+          </div>
+        </div>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">Lishu gupta</span>
+          </div>
+        </div>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">Lishu gupta</span>
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  return (
+    <RightBarStyled>
+      <div className="wrapper">
+        {profile ? <ProfileRightBar /> : <HomeRightBar />}
       </div>
     </RightBarStyled>
   );
