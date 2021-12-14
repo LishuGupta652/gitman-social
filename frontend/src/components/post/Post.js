@@ -70,7 +70,7 @@ const PostStyled = styled.div`
   }
 `;
 
-const Post = ({ post }) => {
+const Post = (post) => {
   console.log(post);
   return (
     <PostStyled>

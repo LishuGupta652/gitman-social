@@ -12,13 +12,15 @@ const FeedStyled = styled.div`
 `;
 
 const Feed = () => {
+  console.log(Posts);
   return (
     <FeedStyled>
       <div className="wrapper">
         <Share />
-        {Posts.map((post, index) => {
-          <Post post={post} key={index} />;
-        })}
+        {Posts.map((post, index) => (
+          <Post post={post} key={index} />
+        ))}
+        <Post />
       </div>
     </FeedStyled>
   );
