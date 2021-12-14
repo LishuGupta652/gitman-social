@@ -1,13 +1,63 @@
 import styled from "styled-components";
-import { feed, PermMedia } from "@mui/icons-material";
+import {
+  feed,
+  PermMedia,
+  Label,
+  Room,
+  EmojiEmotions,
+} from "@mui/icons-material";
 const ShareStyled = styled.div`
   flex: 6;
   background: #fff;
   width: 100%;
   height: 170px;
   border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  wrapper {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  .wrapper {
+    padding: 10px;
+    .top {
+      display: flex;
+      align-items: center;
+    }
+    .top img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    .shareInput {
+      width: 80%;
+      border: none;
+    }
+    .shareInput:focus {
+      outline: none;
+    }
+    hr {
+      margin: 20px;
+    }
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .options {
+        display: flex;
+        margin-left: 20px;
+
+        .option {
+          display: flex;
+          align-items: center;
+          margin: 15px;
+          cursor: pointer;
+
+          .icon {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -16,7 +66,7 @@ const Share = () => {
     <ShareStyled>
       <div className="wrapper">
         <div className="top">
-          <img className="profilePicture" src="/assets/person/1.jpeg" alt="" />
+          <img className="profilePicture" src="/lishu.jpg" alt="" />
           <input
             type="text"
             className="shareInput"
@@ -29,6 +79,18 @@ const Share = () => {
             <div className="option">
               <PermMedia className="icon" />
               <div className="optionText">Photos or video</div>
+            </div>
+            <div className="option">
+              <Label className="icon" />
+              <div className="optionText">Tag</div>
+            </div>
+            <div className="option">
+              <Room className="icon" />
+              <div className="optionText">Location</div>
+            </div>
+            <div className="option">
+              <EmojiEmotions className="icon" />
+              <div className="optionText">Feelings</div>
             </div>
           </div>
         </div>
