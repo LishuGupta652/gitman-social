@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Share from "../share/Share";
 
 const FeedStyled = styled.div`
   flex: 6;
@@ -11,7 +12,9 @@ const FeedStyled = styled.div`
 const Feed = () => {
   return (
     <FeedStyled>
-      <div className="wrapper">wrapper</div>
+      <div className="wrapper">
+        <Share />
+      </div>
     </FeedStyled>
   );
 };
