@@ -19,7 +19,6 @@ const Feed = () => {
         {Posts.map((post, index) => (
           <Post post={post} key={index} />
         ))}
-        <Post />
       </div>
     </FeedStyled>
   );
