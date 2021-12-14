@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const LoginStyled = styled.div``;
+const LoginStyled = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
 const Login = () => {
   return (
     <LoginStyled>
@@ -12,7 +15,9 @@ const Login = () => {
             Connect with friends and the world around you on GitmanSocial.
           </span>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="loginBox"></div>
+        </div>
       </div>
     </LoginStyled>
   );
