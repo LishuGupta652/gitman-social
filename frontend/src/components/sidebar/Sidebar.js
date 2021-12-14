@@ -9,7 +9,11 @@ import {
   VideoCallRounded,
   WorkOutline,
 } from "@mui/icons-material";
+
+import { Users } from "../../dummyData";
+
 import styled from "styled-components";
+import CloseFriend from "../closeFriend/CloseFriend";
 
 const SidebarStyled = styled.div`
   flex: 2;
@@ -104,30 +108,9 @@ const Sidebar = () => {
         <button className="button">Show more</button>
         <hr />
         <ul className="friendList">
-          <li className="friendListItem">
-            <img src="/lishu.jpg" className="friendImage" alt="" />
-            <span className="friendName">Lishu gupta</span>
-          </li>
-          <li className="friendListItem">
-            <img src="/lishu.jpg" className="friendImage" alt="" />
-            <span className="friendName">Lishu gupta</span>
-          </li>
-          <li className="friendListItem">
-            <img src="/lishu.jpg" className="friendImage" alt="" />
-            <span className="friendName">Lishu gupta</span>
-          </li>
-          <li className="friendListItem">
-            <img src="/lishu.jpg" className="friendImage" alt="" />
-            <span className="friendName">Lishu gupta</span>
-          </li>
-          <li className="friendListItem">
-            <img src="/lishu.jpg" className="friendImage" alt="" />
-            <span className="friendName">Lishu gupta</span>
-          </li>
-          <li className="friendListItem">
-            <img src="/lishu.jpg" className="friendImage" alt="" />
-            <span className="friendName">Lishu gupta</span>
-          </li>
+          {Users.map((user, i) => {
+            return <closeFriend user={user} key={i} />;
+          })}
         </ul>
       </div>
     </SidebarStyled>

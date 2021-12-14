@@ -43,11 +43,6 @@ const RightBarStyled = styled.div`
       list-style: none;
       margin-left: 20px;
     }
-    .rightbarFriend {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
     .rightbarProfileImgContainer {
       margin-right: 10px;
       position: relative;
@@ -59,6 +54,11 @@ const RightBarStyled = styled.div`
       object-fit: cover;
     }
 
+    .rightbarFriend {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
     .rightbarOnline {
       width: 12px;
       height: 12px;
