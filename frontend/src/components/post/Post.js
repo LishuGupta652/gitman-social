@@ -36,6 +36,38 @@ const PostStyled = styled.div`
   .heartIcon {
     color: red;
   }
+  .center {
+    margin: 20px 0;
+  }
+  .postImage {
+    margin-top: 20px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .postBottomLeft {
+    display: flex;
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .postLikeCounter {
+      font-size: 15px;
+    }
+  }
+  .postCommentText {
+    cursor: pointer;
+    border-bottom: 1px dashed gray;
+    font-size: 15px;
+  }
 `;
 
 const Post = () => {
@@ -58,9 +90,13 @@ const Post = () => {
         </div>
         <div className="bottom">
           <div className="postBottomLeft">
-            <HeartBroken className="heartIcon" />
+            <img className="likeIcon" src="assets/like.png" alt="" />
+            <img className="likeIcon" src="assets/heart.webp" alt="" />
+            <span className="likeCounter">23 people liked it </span>
           </div>
-          <div className="postBottomRight"></div>
+          <div className="postBottomRight">
+            <span className="postCommentText">10 comments</span>
+          </div>
         </div>
       </div>
     </PostStyled>
