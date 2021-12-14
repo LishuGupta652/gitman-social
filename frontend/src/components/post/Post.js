@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MoreVert } from "@mui/icons-material";
+import { HeartBroken, MoreVert } from "@mui/icons-material";
 const PostStyled = styled.div`
   width: 100%;
   border-radius: 10px;
@@ -33,6 +33,9 @@ const PostStyled = styled.div`
   .postDate {
     font-size: 12px;
   }
+  .heartIcon {
+    color: red;
+  }
 `;
 
 const Post = () => {
@@ -49,8 +52,16 @@ const Post = () => {
             <MoreVert />
           </div>
         </div>
-        <div className="center"></div>
-        <div className="bottom"></div>
+        <div className="center">
+          <span className="postText">Hey! This is my first post.</span>
+          <img className="postImage" src="/background.jpg" alt="lishu gupta" />
+        </div>
+        <div className="bottom">
+          <div className="postBottomLeft">
+            <HeartBroken className="heartIcon" />
+          </div>
+          <div className="postBottomRight"></div>
+        </div>
       </div>
     </PostStyled>
   );
