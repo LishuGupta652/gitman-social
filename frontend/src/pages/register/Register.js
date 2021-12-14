@@ -36,7 +36,7 @@ const RegisterStyled = styled.div`
   }
 
   .registerBox {
-      height: 300px;
+      height: 400px;
       padding: 20px;
       background-color: #fff;
       border-radius: 10px;
