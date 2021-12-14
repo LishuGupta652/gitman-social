@@ -100,10 +100,14 @@ const Register = () => {
               className="registerInput"
             />
             <input type="email" placeholder="Email" className="registerInput" />
-            <input type="email" placeholder="Email" className="registerInput" />
             <input
               type="password"
               placeholder="Password"
+              className="registerInput"
+            />
+            <input
+              type="password"
+              placeholder="Password Again"
               className="registerInput"
             />
             <button className="registerButton">Sign Up</button>
