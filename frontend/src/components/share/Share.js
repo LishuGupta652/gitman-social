@@ -55,7 +55,22 @@ const ShareStyled = styled.div`
             font-size: 18px;
             margin-right: 10px;
           }
+          .optionText {
+            font-size: 14px;
+            fotnt-weight: 500;
+          }
         }
+      }
+
+      .shareButton {
+        padding: 7px;
+        border: none;
+        border-radius: 5px;
+        background-color: green;
+        font-weight: 500;
+        margin-right: 20px;
+        cursor: pointer;
+        color: white;
       }
     }
   }
@@ -93,6 +108,8 @@ const Share = () => {
               <div className="optionText">Feelings</div>
             </div>
           </div>
+
+          <button className="shareButton">share</button>
         </div>
       </div>
     </ShareStyled>
