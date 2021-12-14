@@ -111,12 +111,7 @@ const Post = ({ post }) => {
               className="likeIcon"
               src="assets/like.png"
               onClick={likeHandler}
-              alt=""
-            />
-            <img
-              className="likeIcon"
-              src="assets/heart.webp"
-              onClick={likeHandler}
+              style={{ marginLeft: 10 }}
               alt=""
             />
             <span className="likeCounter">{like} people liked it </span>
