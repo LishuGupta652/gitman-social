@@ -15,6 +15,24 @@ const PostStyled = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+  .topLeft {
+    display: flex;
+    align-items: center;
+  }
+  .postProfileImage {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .postUsername {
+    font-size: 15px;
+    fot-weight: 600;
+    margin: 0 10px;
+  }
+  .postDate {
+    font-size: 12px;
+  }
 `;
 
 const Post = () => {
