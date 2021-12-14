@@ -75,7 +75,13 @@ const PostStyled = styled.div`
 
 const Post = ({ post }) => {
   const [like, setLike] = useState(post.like);
-  const user = Users.filter((user) => user.id === 1);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const likeHandler = () => {
+    setLike(isLiked ? like - 1 : like + 1);
+    setIsLiked(!isLiked);
+  };
+
   return (
     <PostStyled>
       <div className="wrapper">
@@ -101,8 +107,18 @@ const Post = ({ post }) => {
         </div>
         <div className="bottom">
           <div className="postBottomLeft">
-            <img className="likeIcon" src="assets/like.png" alt="" />
-            <img className="likeIcon" src="assets/heart.webp" alt="" />
+            <img
+              className="likeIcon"
+              src="assets/like.png"
+              onClick={likeHandler}
+              alt=""
+            />
+            <img
+              className="likeIcon"
+              src="assets/heart.webp"
+              onClick={likeHandler}
+              alt=""
+            />
             <span className="likeCounter">{like} people liked it </span>
           </div>
           <div className="postBottomRight">
