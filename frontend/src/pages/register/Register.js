@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const LoginStyled = styled.div`
+const RegisterStyled = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #f0f2f5;
@@ -9,7 +9,7 @@ const LoginStyled = styled.div`
   justify-content: center;
   align-items: center;
 
-  .loginWrapper {
+  .registerWrapper {
     width: 70%;
     height: 70%;
     display: flex;
@@ -25,17 +25,17 @@ const LoginStyled = styled.div`
   .right{
   }
 
-  .loginLogo{
+  .registerLogo{
       font-size: 50px;
       font-weight: bold;
       color: #1775ee;
 
   }
-  .loginDesc {
+  .registerDesc {
       font-size: 24px;
   }
 
-  .loginBox {
+  .registerBox {
       height: 300px;
       padding: 20px;
       background-color: #fff;
@@ -44,17 +44,17 @@ const LoginStyled = styled.div`
       flex-direction: column;
       justify-content: space-between;
   }
-  .loginInput {
+  .registerInput {
       height: 50px;
       border-radius: 10px;
       border: 1px solid gray;
       font-size: 18px;
       padding: 20px;
   }
-  .loginInput:foucs {
+  .registerInput:foucs {
       outline: none;
   }
-  .loginButton{ 
+  .registerButton{ 
       height: 50px;
       border-radius: 10px;
       border: none;
@@ -64,11 +64,11 @@ const LoginStyled = styled.div`
       font-weight: bold; 
       curson: pointer;
   }
-  .loginForgot{ 
+  .registerForgot{ 
       text-align:center;
       color: #1775ee;
   }
-  .loginRegisterButton{
+  .registerRegisterButton{
       align-self: center;;
       padding: 10px;
     height: 50px;
@@ -84,31 +84,31 @@ const LoginStyled = styled.div`
 `;
 const Register = () => {
   return (
-    <LoginStyled>
-      <div className="loginWrapper">
+    <RegisterStyled>
+      <div className="registerWrapper">
         <div className="left">
-          <h3 className="loginLogo">GitmanSocial</h3>
-          <span className="loginDesc">
+          <h3 className="registerLogo">GitmanSocial</h3>
+          <span className="registerDesc">
             Connect with friends and the world around you on GitmanSocial.
           </span>
         </div>
         <div className="right">
-          <div className="loginBox">
-            <input type="email" placeholder="Email" className="loginInput" />
+          <div className="registerBox">
+            <input type="email" placeholder="Email" className="registerInput" />
             <input
               type="password"
               placeholder="Password"
-              className="loginInput"
+              className="registerInput"
             />
-            <button className="loginButton">Register</button>
-            <span className="loginForgot">Forgot Password ? </span>
-            <button className="loginRegisterButton">
+            <button className="registerButton">Register</button>
+            <span className="registerForgot">Forgot Password ? </span>
+            <button className="registerRegisterButton">
               Create a New Account
             </button>
           </div>
         </div>
       </div>
-    </LoginStyled>
+    </RegisterStyled>
   );
 };
 
