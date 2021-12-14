@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Post from "../post/Post";
 import Share from "../share/Share";
+import { Posts } from "../../dummyData";
 
 const FeedStyled = styled.div`
   flex: 6;
@@ -15,13 +16,9 @@ const Feed = () => {
     <FeedStyled>
       <div className="wrapper">
         <Share />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {Posts.map((post, index) => {
+          <Post post={post} key={index} />;
+        })}
       </div>
     </FeedStyled>
   );
