@@ -1,52 +1,53 @@
 export const Users = [
   {
     id: 1,
-    profilePicture: "assets/person/1.jpeg",
+    //get dummy iamge of person
+    profilePicture: "https://avatars.dicebear.com/api/human/380.svg",
     username: "Safak Kocaoglu",
   },
   {
     id: 2,
-    profilePicture: "assets/person/2.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/380.svg",
     username: "Janell Shrum",
   },
   {
     id: 3,
-    profilePicture: "assets/person/3.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/38016.svg",
     username: "Alex Durden",
   },
   {
     id: 4,
-    profilePicture: "assets/person/4.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/38011.svg",
     username: "Dora Hawks",
   },
   {
     id: 5,
-    profilePicture: "assets/person/5.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/38012.svg",
     username: "Thomas Holden",
   },
   {
     id: 6,
-    profilePicture: "assets/person/6.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/38014.svg",
     username: "Shirley Beauchamp",
   },
   {
     id: 7,
-    profilePicture: "assets/person/7.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/38120.svg",
     username: "Travis Bennett",
   },
   {
     id: 8,
-    profilePicture: "assets/person/8.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/38012.svg",
     username: "Kristen Thomas",
   },
   {
     id: 9,
-    profilePicture: "assets/person/9.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/31280.svg",
     username: "Gary Duty",
   },
   {
     id: 10,
-    profilePicture: "assets/person/10.jpeg",
+    profilePicture: "https://avatars.dicebear.com/api/human/12380.svg",
     username: "Safak Kocaoglu",
   },
 ];
