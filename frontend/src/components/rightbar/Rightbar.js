@@ -23,7 +23,10 @@ const RightBarStyled = styled.div`
     .rightbarAd {
       border-radius: 10px;
       margin: 20px 0;
-      max-widht: 100px;
+      max-width: 100px;
+    }
+    .rightbarAdImage {
+      max-width: 100%;
     }
     .rightbarTitle {
       margin-bottom: 20px;
@@ -78,7 +81,9 @@ const Rightbar = () => {
           </span>
         </div>
 
-        <div className="rightbarAd"></div>
+        <div className="rightbarAd">
+          <img className="rightbarAdImage" alt="" src="/assets/ad.jpg" />
+        </div>
 
         <ul className="rightbarFriendList">
           <li className="rightbarFriend">
