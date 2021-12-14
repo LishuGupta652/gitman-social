@@ -25,10 +25,10 @@ const RightBarStyled = styled.div`
       margin: 20px 0;
       max-width: 100%;
       margin-left: 10px;
-    }
-    .rightbarAdImage {
-      max-width: 100%;
-      max-height: 300px;
+      border-radius: 20px;
+      max-height: 400px;
+      width: 100%;
+      object-fit: cover;
     }
     .rightbarTitle {
       margin-bottom: 20px;
@@ -67,7 +67,8 @@ const RightBarStyled = styled.div`
       border: 2px solid white;
     }
     .rightbarUsername {
-      font-weight: 500;
+      font-weight: bold;
+      text-transform: capitalize;
     }
   }
 `;
@@ -83,9 +84,7 @@ const Rightbar = () => {
           </span>
         </div>
 
-        <div className="rightbarAd">
-          <img className="rightbarAdImage" alt="" src="/assets/add.jpg" />
-        </div>
+        <img className="rightbarAd" alt="" src="/assets/add.jpg" />
 
         <ul className="rightbarFriendList">
           <li className="rightbarFriend">
