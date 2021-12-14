@@ -14,6 +14,23 @@ const LoginStyled = styled.div`
     height: 70%;
     display: flex;
   }
+
+  .left, .right{
+      flex; 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .loginLogo{
+      font-size: 50px;
+      font-weight: bold;
+      color: #1775ee;
+
+  }
+  .loginDesc {
+      font-size: 24px;
+  }
 `;
 const Login = () => {
   return (
@@ -26,7 +43,19 @@ const Login = () => {
           </span>
         </div>
         <div className="right">
-          <div className="loginBox"></div>
+          <div className="loginBox">
+            <input type="email" placeholder="Email" className="loginInput" />
+            <input
+              type="password"
+              placeholder="Password"
+              className="loginInput"
+            />
+            <button className="loginButton">Login</button>
+            <span className="loginForgot">Forgot Password ? </span>
+            <button className="loginRegisterButton">
+              Create a New Account
+            </button>
+          </div>
         </div>
       </div>
     </LoginStyled>
