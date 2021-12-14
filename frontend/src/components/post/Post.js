@@ -70,8 +70,7 @@ const PostStyled = styled.div`
   }
 `;
 
-const Post = (post) => {
-  console.log(post);
+const Post = ({ post }) => {
   return (
     <PostStyled>
       <div className="wrapper">
@@ -79,24 +78,24 @@ const Post = (post) => {
           <div className="topLeft">
             <img src="/lishu.jpg" className="postProfileImage" alt="" />
             <span className="postUsername">Lishu Gupta</span>
-            <span className="postDate">4 min ago</span>
+            <span className="postDate">{post?.date}</span>
           </div>
           <div className="topRight">
             <MoreVert />
           </div>
         </div>
         <div className="center">
-          <span className="postText">Hey! This is my first post.</span>
-          <img className="postImage" src="/background.jpg" alt="lishu gupta" />
+          <span className="postText">{post?.desc}</span>
+          <img className="postImage" src={post.photo} alt={post.desc} />
         </div>
         <div className="bottom">
           <div className="postBottomLeft">
             <img className="likeIcon" src="assets/like.png" alt="" />
             <img className="likeIcon" src="assets/heart.webp" alt="" />
-            <span className="likeCounter">23 people liked it </span>
+            <span className="likeCounter">{post.like} people liked it </span>
           </div>
           <div className="postBottomRight">
-            <span className="postCommentText">10 comments</span>
+            <span className="postCommentText">{post.comment} comments</span>
           </div>
         </div>
       </div>

@@ -12,7 +12,6 @@ const FeedStyled = styled.div`
 `;
 
 const Feed = () => {
-  console.log(Posts);
   return (
     <FeedStyled>
       <div className="wrapper">
