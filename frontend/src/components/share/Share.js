@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  feed,
-  PermMedia,
-  Label,
-  Room,
-  EmojiEmotions,
-} from "@mui/icons-material";
+import { PermMedia, Label, Room, EmojiEmotions } from "@mui/icons-material";
 const ShareStyled = styled.div`
   flex: 6;
   background: #fff;

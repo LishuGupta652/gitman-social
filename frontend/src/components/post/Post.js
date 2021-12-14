@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HeartBroken, MoreVert } from "@mui/icons-material";
+import { MoreVert } from "@mui/icons-material";
 
 import { Users } from "../../dummyData";
 import { useState } from "react";

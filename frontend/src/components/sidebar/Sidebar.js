@@ -1,7 +1,6 @@
 import {
   Chat,
   Event,
-  Feed,
   Group,
   HelpOutline,
   RssFeed,
