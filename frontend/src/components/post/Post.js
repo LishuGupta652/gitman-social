@@ -80,7 +80,9 @@ const Post = ({ post }) => {
         <div className="top">
           <div className="topLeft">
             <img src="/lishu.jpg" className="postProfileImage" alt="" />
-            <span className="postUsername">Lishu Gupta</span>
+            <span className="postUsername">
+              {Users.filter((u) => u.id === post.userId)[0].username}
+            </span>
             <span className="postDate">{post?.date}</span>
           </div>
           <div className="topRight">
