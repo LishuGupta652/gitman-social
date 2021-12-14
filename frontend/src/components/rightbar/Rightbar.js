@@ -19,6 +19,12 @@ const RightBarStyled = styled.div`
       font-weight: 300;
       font-size: 15px;
     }
+
+    .rightbarAd {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
   }
 `;
 
@@ -33,6 +39,12 @@ const Rightbar = () => {
           </span>
         </div>
         <img src="rightbarAd" alt="" src="/background.jpg" />
+
+        <h4 className="rightbarFriendList">
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer"></div>
+          </li>
+        </h4>
       </div>
     </RightBarStyled>
   );
