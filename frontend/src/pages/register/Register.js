@@ -94,6 +94,12 @@ const Register = () => {
         </div>
         <div className="right">
           <div className="registerBox">
+            <input
+              type="text"
+              placeholder="Username"
+              className="registerInput"
+            />
+            <input type="email" placeholder="Email" className="registerInput" />
             <input type="email" placeholder="Email" className="registerInput" />
             <input
               type="password"
