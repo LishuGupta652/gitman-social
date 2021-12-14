@@ -103,7 +103,7 @@ const Post = ({ post }) => {
           <div className="postBottomLeft">
             <img className="likeIcon" src="assets/like.png" alt="" />
             <img className="likeIcon" src="assets/heart.webp" alt="" />
-            <span className="likeCounter">{post?.like} people liked it </span>
+            <span className="likeCounter">{like} people liked it </span>
           </div>
           <div className="postBottomRight">
             <span className="postCommentText">{post?.comment} comments</span>
