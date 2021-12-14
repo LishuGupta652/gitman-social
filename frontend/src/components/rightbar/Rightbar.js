@@ -1,6 +1,6 @@
 import { CardGiftcard } from "@mui/icons-material";
 import styled from "styled-components";
-
+import { User } from "../../dummyData";
 const RightBarStyled = styled.div`
   flex: 4;
   gird-area: rightbar;
