@@ -77,19 +77,19 @@ const Share = () => {
         <div className="bottom">
           <div className="options">
             <div className="option">
-              <PermMedia className="icon" />
+              <PermMedia htmlColor="tomato" className="icon" />
               <div className="optionText">Photos or video</div>
             </div>
             <div className="option">
-              <Label className="icon" />
+              <Label htmlColor="blue" className="icon" />
               <div className="optionText">Tag</div>
             </div>
             <div className="option">
-              <Room className="icon" />
+              <Room htmlColor="green" className="icon" />
               <div className="optionText">Location</div>
             </div>
             <div className="option">
-              <EmojiEmotions className="icon" />
+              <EmojiEmotions htmlColor="golden" className="icon" />
               <div className="optionText">Feelings</div>
             </div>
           </div>
