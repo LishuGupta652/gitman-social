@@ -158,26 +158,22 @@ const Rightbar = ({ profile }) => {
             <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Lishu gupta</span>
           </div>
-        </div>
-        <div className="rightbarFollowings">
           <div className="rightbarFollowing">
             <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Lishu gupta</span>
           </div>
-        </div>
-        <div className="rightbarFollowings">
           <div className="rightbarFollowing">
             <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Lishu gupta</span>
           </div>
-        </div>
-        <div className="rightbarFollowings">
           <div className="rightbarFollowing">
             <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Lishu gupta</span>
           </div>
-        </div>
-        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">Lishu gupta</span>
+          </div>
           <div className="rightbarFollowing">
             <img src="lishu.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Lishu gupta</span>
