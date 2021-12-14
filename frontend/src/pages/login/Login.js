@@ -4,6 +4,16 @@ import styled from "styled-components";
 const LoginStyled = styled.div`
   width: 100vw;
   height: 100vh;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loginWrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
+  }
 `;
 const Login = () => {
   return (
