@@ -89,7 +89,7 @@ const Share = () => {
               <div className="optionText">Location</div>
             </div>
             <div className="option">
-              <EmojiEmotions htmlColor="golden" className="icon" />
+              <EmojiEmotions htmlColor="goldenrod" className="icon" />
               <div className="optionText">Feelings</div>
             </div>
           </div>
