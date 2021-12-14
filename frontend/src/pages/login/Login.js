@@ -20,6 +20,9 @@ const LoginStyled = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
+      width: 100%;
+  }
+  .right{
   }
 
   .loginLogo{
@@ -31,6 +34,53 @@ const LoginStyled = styled.div`
   .loginDesc {
       font-size: 24px;
   }
+
+  .loginBox {
+      height: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .loginInput {
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid gray;
+      font-size: 18px;
+      padding: 20px;
+  }
+  .loginInput:foucs {
+      outline: none;
+  }
+  .loginButton{ 
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      background-color: #1775ee;
+      color: white;
+      font-size: 18px;
+      font-weight: bold; 
+      curson: pointer;
+  }
+  .loginForgot{ 
+      text-align:center;
+      color: #1775ee;
+  }
+  .loginRegisterButton{
+      align-self: center;;
+      padding: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #42b72a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold; 
+    curson: pointer;
+  }
+
 `;
 const Login = () => {
   return (
