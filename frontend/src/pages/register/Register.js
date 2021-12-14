@@ -100,11 +100,9 @@ const Register = () => {
               placeholder="Password"
               className="registerInput"
             />
-            <button className="registerButton">Register</button>
+            <button className="registerButton">Sign Up</button>
             <span className="registerForgot">Forgot Password ? </span>
-            <button className="registerRegisterButton">
-              Create a New Account
-            </button>
+            <button className="registerRegisterButton">Log into Account</button>
           </div>
         </div>
       </div>
