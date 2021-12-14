@@ -25,6 +25,37 @@ const RightBarStyled = styled.div`
       border-radius: 10px;
       margin: 20px 0;
     }
+
+    .rightbarFriendList {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .rightbarFriend {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .rightbarProfileImgContainer {
+      margin-right: 10px;
+      postion: relative;
+    }
+    .rightbarProfileImg {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .rightbarOnline {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: limegreen;
+      position: absolute;
+      top: -5px;
+      right: 0;
+    }
   }
 `;
 
@@ -42,7 +73,15 @@ const Rightbar = () => {
 
         <h4 className="rightbarFriendList">
           <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer"></div>
+            <div className="rightbarProfileImgContainer">
+              <img
+                src="/background.jpg"
+                className="rightbarProfileImg"
+                alt=""
+              />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">lishu gupta</span>
           </li>
         </h4>
       </div>
